@@ -18,18 +18,28 @@
 <body>
     <body id="body-pd">
         <header class="header" id="header">
-            <div class="header_toggle"> <i class='bx bx-menu fal fa-bars' id="header-toggle"></i> </div>
-            <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+            <div class="header_toggle">
+                 <i class='bx bx-menu fal fa-bars' id="header-toggle"></i> </div>
+            <div class="header_img">
+                <img src="https://i.imgur.com/hczKIze.jpg" alt=""> 
+            </div>
         </header>
         <div class="l-navbar" id="nav-bar">
             <nav class="nav">
-                <div> <a href="#" class="nav_logo"> <span class='bx bx-layer nav_logo-icon'>Ali</span> <span class="nav_logo-name">Bakhshandeh</span> </a>
+                <div> 
+                    <a href="#" class="nav_logo"> 
+                        <span class='bx bx-layer nav_logo-icon'>Ali</span> 
+                        <span class="nav_logo-name">Bakhshandeh</span>
+                     </a>
+                     <div id="closeSideNavResponsiveId" class="closeSideNavResponsive">
+                        <i class="fal fa-times"></i>
+                    </div>
                     <div class="nav_list">
                         <a href="#" class="nav_link active">
                             <i class='bx bx-grid-alt nav_icon fal fa-home'></i>
-                            <span class="nav_name">Home</span> </a> <a href="#" class="nav_link">
+                            <span class="nav_name">صفحه اصلی</span> </a> <a href="#" class="nav_link">
                                 <i class='bx bx-user nav_icon fal fa-address-card'></i>
-                                <span class="nav_name">info</span>
+                                <span class="nav_name">درباره من</span>
                             </a>
                     </div>
                 </div> 
@@ -38,9 +48,25 @@
             </nav>
         </div>
         <!--Container Main start-->
-        <div class="height-100 bg-light">
-            <h4>Main Components</h4>
+        <div class="height-100 bg-light container-fluid content">
+            <section class="h-100 d-flex" id="home">
+                <div class="m-auto">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="boxImage">
+                                <div class="shape"></div>
+                              </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <h1 class="homeName">علی بخشنده اردستانی</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
+        <!-- <div id="canvas">
+            <div class="circle"></div>
+          </div> -->
         <!--Container Main end-->
 <!-- JavaScript JQ & popperJs -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

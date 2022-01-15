@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
-
+@font-face {
+    font-family: SOGAND;
+    src: url(../fonts/SOGAND.ttf);
+}
+@font-face {
+    font-family: Yekan;
+    src: url(../fonts/Yekan.ttf);
+}
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
@@ -20,7 +27,7 @@
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
-    padding: 0 1rem;
+    padding: 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     transition: .5s
@@ -44,7 +51,16 @@ a {
     z-index: var(--z-fixed);
     transition: .5s
 }
-
+.closeSideNavResponsive{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1.7em;
+    display: none;
+}
 .header_toggle {
     color: var(--first-color);
     font-size: 1.5rem;
@@ -93,7 +109,14 @@ a {
     padding: .5rem 0 .5rem 1.5rem;
     text-decoration: none;
 }
-
+.nav_link{
+    display: flex;
+    text-align: right;
+}
+.nav_link .nav_name{
+    margin-left: auto;
+    font-family: Yekan;
+}
 .nav_logo {
     margin-bottom: 2rem;
 }
@@ -126,7 +149,8 @@ a {
 }
 
 .show {
-    left: 0
+    left: 0;
+    width: 100%;
 }
 
 .body-pd {
@@ -191,3 +215,69 @@ a {
         padding-left: calc(var(--nav-width) + 188px)
     }
 }
+/* mouse pointer */
+/* .circle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    margin: -80px 0 0 -15px;
+    background: var(--first-color);
+    border-radius: 80%;
+    backface-visibility: hidden;
+  } */
+  /* image home */
+  .boxImage {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: center;
+  }
+  
+  .shape {
+       background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    height: 300px;
+    transition: all 1s ease-in-out;
+    width: 300px;
+    z-index: 5;
+    background: url(../img/Profile/profile.jpeg) center;
+    background-size: cover;
+}
+  
+  @keyframes morph {
+    0% {
+              border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+              /* background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%); */
+      } 
+      
+      50% {
+              border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+              /* background: linear-gradient(45deg, var(--third) 0%, var(--secondary) 100%); */
+      }
+    
+      100% {
+          border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+          /* background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%); */
+      } 
+  }
+  /* home */
+  .content section{
+      overflow: hidden;
+  }
+  .homeName{
+      font-size: 4em;
+      padding-left: 10px;
+      font-family: SOGAND;
+  }
+  @media screen and (max-width: 768px){
+      .closeSideNavResponsive{
+          display: block;
+      }
+    .homeName{
+        font-size: 3em;
+        padding-left: 10px;
+    }  
+  }

@@ -1,7 +1,8 @@
 // js for sidenav -->
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+    const showNavbar = (closeResponsive,toggleId, navId, bodyId, headerId) =>{
+    const closeSideNavResponsive = document.getElementById(closeResponsive)
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId),
     bodypd = document.getElementById(bodyId),
@@ -20,9 +21,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     headerpd.classList.toggle('body-pd')
     })
     }
+    closeSideNavResponsive.addEventListener('click', ()=>{
+        console.log(1)
+        // show navbar
+        nav.classList.toggle('show')
+        // change icon
+        closeSideNavResponsive.classList.toggle('bx-x')
+        // add padding to body
+        bodypd.classList.toggle('body-pd')
+        // add padding to header
+        headerpd.classList.toggle('body-pd')
+        }) 
     }
     
-    showNavbar('header-toggle','nav-bar','body-pd','header')
+    showNavbar('closeSideNavResponsiveId','header-toggle','nav-bar','body-pd','header')
     
     /*===== LINK ACTIVE =====*/
     const linkColor = document.querySelectorAll('.nav_link')
@@ -38,3 +50,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Your code to run since DOM is loaded and ready
     });
     // end Side nav code -->
+    // mouse Pointer follow
+    // $(document).on('mousemove', function(e) {
+    //     var xPos = e.pageX;
+    //     var yPos = e.pageY;
+    //     // console.log(xPos, yPos);
+    //     $('.circle').css({
+    //       'top': yPos,
+    //       'left': xPos
+    //     });
+    //   });
+    //   $(document).on('onmouseover', function(e){
+    //       $('.circle').css({
+    //           'opacity': 0,
+    //       })
+    //   })
